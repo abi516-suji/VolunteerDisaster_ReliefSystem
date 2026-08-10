@@ -1,0 +1,103 @@
+Table Users {
+  user_id int [pk, increment]
+  name varchar(100)
+  email varchar(100) [unique]
+  password varchar(255)
+  role varchar(30)
+}
+
+Table Volunteers {
+  volunteer_id int [pk, increment]
+  user_id int [ref: - Users.user_id]
+  skills varchar(255)
+  location varchar(255)
+  availability varchar(50)
+  experience varchar(100)
+  verification_status varchar(30)
+}
+
+Table Disasters {
+  disaster_id int [pk, increment]
+  disaster_type varchar(100)
+  disaster_name varchar(150)
+  start_date date
+  description text
+  status varchar(30)
+}
+
+Table Affected_Areas {
+  area_id int [pk, increment]
+  disaster_id int [ref: > Disasters.disaster_id]
+  location varchar(255)
+  population_affected int
+  priority_level varchar(30)
+  severity varchar(30)
+}
+
+Table Relief_Tasks {
+  task_id int [pk, increment]
+  area_id int [ref: > Affected_Areas.area_id]
+  task_name varchar(150)
+  required_skill varchar(150)
+  priority varchar(30)
+  status varchar(30)
+}
+
+Table Task_Assignments {
+  assignment_id int [pk, increment]
+  task_id int [ref: > Relief_Tasks.task_id]
+  volunteer_id int [ref: > Volunteers.volunteer_id]
+  assigned_date datetime
+  accepted_date datetime
+  completion_date datetime
+}
+
+Table Resources {
+  resource_id int [pk, increment]
+  resource_name varchar(150)
+  quantity_available int
+  resource_type varchar(100)
+  storage_location varchar(255)
+}
+
+Table Resource_Requests {
+  request_id int [pk, increment]
+  area_id int [ref: > Affected_Areas.area_id]
+  resource_id int [ref: > Resources.resource_id]
+  quantity_required int
+  request_status varchar(30)
+}
+
+Table SOS_Alerts {
+  alert_id int [pk, increment]
+  volunteer_id int [ref: > Volunteers.volunteer_id]
+  location varchar(255)
+  alert_time datetime
+  alert_status varchar(30)
+}
+
+Table Relief_Reports {
+  report_id int [pk, increment]
+  task_id int [ref: > Relief_Tasks.task_id]
+  volunteer_id int [ref: > Volunteers.volunteer_id]
+  description text
+  submitted_date datetime
+  verification_status varchar(30)
+}
+
+Table Notifications {
+  notification_id int [pk, increment]
+  user_id int [ref: > Users.user_id]
+  message text
+  notification_type varchar(50)
+  created_at datetime
+  read_status boolean
+}
+
+Table Volunteer_Contributions {
+  contribution_id int [pk, increment]
+  volunteer_id int [ref: > Volunteers.volunteer_id]
+  task_id int [ref: > Relief_Tasks.task_id]
+  hours_served decimal(5,2)
+  contribution_date date
+}
