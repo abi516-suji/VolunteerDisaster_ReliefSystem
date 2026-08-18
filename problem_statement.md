@@ -27,57 +27,73 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
 ### Core Features
 
 1. **User Registration and Role-Based Login**
+
    - Provides separate access for Admin, Volunteer, and Relief Coordinator.
    - Volunteers can maintain their skills, location, availability, and experience.
 
 2. **Disaster and Affected Area Management**
+
    - Admin can manage disasters, affected locations, population, and priority levels.
 
 3. **Relief Task Management**
+
    - Admin or Relief Coordinator can create and assign tasks.
    - Volunteers can accept tasks and update their progress.
 
 4. **Task Tracking**
+
    - Task status: Assigned → Accepted → In Progress → Completed → Verified.
 
 5. **Resource Management**
+
    - Tracks required and available relief resources and identifies shortages.
 
 ### Additional Features
 
 6. **Smart Volunteer-Task Matching**
+
    - Suggests suitable volunteers based on skills, location, availability, and experience.
 
 7. **Disaster Priority Scoring**
+
    - Classifies affected areas as Critical, High, Medium, or Low based on severity, urgency, and affected population.
 
 8. **Resource Matching**
+
    - Matches required resources with available resources.
 
 9. **Duplicate Request Detection**
+
    - Detects possible duplicate relief requests for the same area and requirement.
 
 10. **Emergency SOS Alert**
+
     - Allows volunteers to send emergency alerts with their location.
 
 11. **Volunteer Verification**
+
     - Admin can verify volunteer details, skills, and experience.
 
 12. **Map and Location Integration**
+
     - Displays disaster areas, affected locations, volunteers, and relief locations.
 
 13. **Notifications and Alerts**
+
     - Sends task assignments, emergency alerts, critical requests, and important updates.
 
 14. **Volunteer Contribution Tracking**
+
     - Tracks completed tasks and volunteer service hours.
 
 15. **Dashboard and Reports**
+
     - Provides an overview of disasters, volunteers, tasks, resources, SOS alerts, and relief progress.
 
 ## 6. Core Entities / Database Tables (list all, minimum 5)
 
 1. **Users**
+
    - user_id
    - name
    - email
@@ -85,6 +101,7 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
    - role
 
 2. **Volunteers**
+
    - volunteer_id
    - user_id
    - skills
@@ -94,6 +111,7 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
    - verification_status
 
 3. **Disasters**
+
    - disaster_id
    - disaster_type
    - disaster_name
@@ -102,6 +120,7 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
    - status
 
 4. **Affected_Areas**
+
    - area_id
    - disaster_id
    - location
@@ -110,6 +129,7 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
    - severity
 
 5. **Relief_Tasks**
+
    - task_id
    - area_id
    - task_name
@@ -118,6 +138,7 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
    - status
 
 6. **Task_Assignments**
+
    - assignment_id
    - task_id
    - volunteer_id
@@ -126,6 +147,7 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
    - completion_date
 
 7. **Resources**
+
    - resource_id
    - resource_name
    - quantity_available
@@ -133,6 +155,7 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
    - storage_location
 
 8. **Resource_Requests**
+
    - request_id
    - area_id
    - resource_id
@@ -140,6 +163,7 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
    - request_status
 
 9. **SOS_Alerts**
+
    - alert_id
    - volunteer_id
    - location
@@ -147,6 +171,7 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
    - alert_status
 
 10. **Relief_Reports**
+
     - report_id
     - task_id
     - volunteer_id
@@ -155,6 +180,7 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
     - verification_status
 
 11. **Notifications**
+
     - notification_id
     - user_id
     - message
@@ -163,6 +189,7 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
     - read_status
 
 12. **Volunteer_Contributions**
+
     - contribution_id
     - volunteer_id
     - task_id
@@ -231,7 +258,7 @@ The proposed system is a web-based **Volunteer Disaster Relief Coordination Syst
 
 ## 9. Choice of Tech Stack
 
-- **Backend:** Java Spring Boot
+- **Backend:** Python FastAPI
 - **Frontend:** HTML, CSS, JavaScript
 - **Database:** MySQL
 - **Authentication:** JWT
