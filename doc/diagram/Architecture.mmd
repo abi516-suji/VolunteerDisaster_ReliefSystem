@@ -1,0 +1,29 @@
+flowchart TD
+
+    A["Volunteer Disaster Relief Coordination System"]
+
+    U["Users<br/>Admin | Volunteer | Relief Coordinator"]
+
+    F["Frontend<br/>HTML + CSS + JavaScript"]
+
+    B["Backend<br/>Python FastAPI<br/>REST API"]
+
+    M["Core Modules<br/>User Management<br/>Disaster Management<br/>Volunteer Management<br/>Relief Task Management<br/>Resource Management"]
+
+    D["MySQL Database<br/>Users<br/>Volunteers<br/>Disasters<br/>Affected Areas<br/>Relief Tasks<br/>Resources<br/>SOS Alerts<br/>Reports"]
+
+    S["Security<br/>JWT Authentication<br/>Role-Based Access"]
+
+    E["External Services<br/>Maps API<br/>Email API"]
+
+    H["Hosting<br/>Frontend: Vercel<br/>Backend: Render"]
+
+    A --> U
+    U --> F
+    F --> B
+    B --> M
+    B --> S
+    B --> D
+    B --> E
+    F --> H
+    B --> H
