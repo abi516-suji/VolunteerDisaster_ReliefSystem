@@ -1,0 +1,91 @@
+classDiagram
+
+class User {
+    +int user_id
+    +string name
+    +string email
+    +string phone
+    +string password
+    +login()
+    +logout()
+}
+
+class Admin {
+    +manageUsers()
+    +manageDisasters()
+    +manageResources()
+}
+
+class Volunteer {
+    +string skills
+    +string availability
+    +registerForRelief()
+    +updateAvailability()
+}
+
+class ReliefCoordinator {
+    +assignVolunteer()
+    +manageReliefRequest()
+    +allocateResource()
+}
+
+class Disaster {
+    +int disaster_id
+    +string type
+    +string severity
+    +string location
+    +datetime date
+    +createDisaster()
+    +updateStatus()
+}
+
+class ReliefRequest {
+    +int request_id
+    +string request_type
+    +string priority
+    +string status
+    +createRequest()
+    +updateStatus()
+}
+
+class Resource {
+    +int resource_id
+    +string resource_name
+    +int quantity
+    +string status
+    +allocateResource()
+}
+
+class VolunteerAssignment {
+    +int assignment_id
+    +datetime assigned_date
+    +string status
+    +assign()
+    +completeAssignment()
+}
+
+class Location {
+    +int location_id
+    +string address
+    +string district
+    +string state
+}
+
+class Notification {
+    +int notification_id
+    +string message
+    +datetime sent_at
+    +sendNotification()
+}
+
+User <|-- Admin
+User <|-- Volunteer
+User <|-- ReliefCoordinator
+
+Disaster "1" --> "many" ReliefRequest
+Disaster "1" --> "1" Location
+ReliefRequest "1" --> "many" VolunteerAssignment
+Volunteer "1" --> "many" VolunteerAssignment
+ReliefCoordinator "1" --> "many" VolunteerAssignment
+ReliefRequest "1" --> "many" Resource
+User "1" --> "many" Notification
