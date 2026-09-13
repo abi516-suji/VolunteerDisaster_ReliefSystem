@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | VDRCS</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <div class="logo-icon">V</div>
+        <span>VDRCS</span>
+    </div>
+
+    <nav>
+        <a href="admin.html">Dashboard</a>
+        <a href="#">Volunteers</a>
+        <a href="#">Disasters</a>
+        <a href="#">Resources</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <a href="../login.html" class="login-btn">Logout</a>
+    </div>
+</header>
+
+<section class="dashboard-page">
+
+    <div class="dashboard-header">
+        <div>
+            <span class="tag">ADMIN PANEL</span>
+            <h1>Welcome, Admin</h1>
+            <p>Manage disaster relief activities from one place.</p>
+        </div>
+
+        <button class="primary-btn">
+            + Create Emergency
+        </button>
+    </div>
+
+    <div class="dashboard-stats">
+
+        <div class="dashboard-card">
+            <span>Active Disasters</span>
+            <strong>08</strong>
+            <small>Currently monitored</small>
+        </div>
+
+        <div class="dashboard-card">
+            <span>Total Volunteers</span>
+            <strong>124</strong>
+            <small>Registered volunteers</small>
+        </div>
+
+        <div class="dashboard-card">
+            <span>Active Tasks</span>
+            <strong>36</strong>
+            <small>Relief tasks</small>
+        </div>
+
+        <div class="dashboard-card">
+            <span>Pending Alerts</span>
+            <strong>12</strong>
+            <small>Needs attention</small>
+        </div>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="panel">
+            <h2>Emergency Areas</h2>
+
+            <div class="list-item">
+                <div>
+                    <strong>Flood Relief</strong>
+                    <small>Thanjavur Area</small>
+                </div>
+                <span class="status danger">Critical</span>
+            </div>
+
+            <div class="list-item">
+                <div>
+                    <strong>Medical Support</strong>
+                    <small>Trichy Area</small>
+                </div>
+                <span class="status warning">High</span>
+            </div>
+
+            <div class="list-item">
+                <div>
+                    <strong>Food Distribution</strong>
+                    <small>Madurai Area</small>
+                </div>
+                <span class="status active">Active</span>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Recent Activities</h2>
+
+            <div class="activity">
+                <strong>Volunteer registered</strong>
+                <small>2 minutes ago</small>
+            </div>
+
+            <div class="activity">
+                <strong>New relief task created</strong>
+                <small>15 minutes ago</small>
+            </div>
+
+            <div class="activity">
+                <strong>Emergency alert received</strong>
+                <small>30 minutes ago</small>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

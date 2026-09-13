@@ -1,0 +1,737 @@
+/* =========================================
+   VDRCS REGISTER PAGE
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fa;
+    color: #102a43;
+}
+
+
+/* =========================================
+   MAIN PAGE
+   ========================================= */
+
+.register-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background: #f5f8fa;
+}
+
+
+/* =========================================
+   LEFT SECTION
+   ========================================= */
+
+.register-left {
+    width: 32%;
+    min-height: 100vh;
+
+    position: relative;
+
+    background-image:
+        url("../images/disaster-relief.jpg.png");
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+/* Dark overlay */
+
+.left-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 35, 52, 0.78),
+            rgba(0, 35, 52, 0.94)
+        );
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.left-logo {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 25px 35px;
+}
+
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+
+    color: white;
+}
+
+
+.left-logo h2 {
+    font-size: 22px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+.left-logo p {
+    margin-top: 3px;
+
+    font-size: 10px;
+
+    line-height: 1.35;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+   ========================================= */
+
+.left-content {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 35px;
+    right: 30px;
+
+    bottom: 45px;
+}
+
+
+.left-content h1 {
+    font-size: 40px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+.left-content h1 span {
+    color: #00b8b8;
+}
+
+
+.title-line {
+    width: 62px;
+    height: 3px;
+
+    background: #00c2c2;
+
+    margin-bottom: 25px;
+}
+
+
+.left-description {
+    font-size: 15px;
+
+    line-height: 1.55;
+
+    color: #ffffff;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   LEFT STATS
+   ========================================= */
+
+.left-stats {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.left-stat {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+
+    border: 2px solid #00c7c7;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #00d0d0;
+
+    font-size: 21px;
+}
+
+
+.left-stat strong {
+    display: block;
+
+    font-size: 21px;
+
+    color: white;
+
+    margin-bottom: 3px;
+}
+
+
+.left-stat span {
+    display: block;
+
+    font-size: 12px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   RIGHT SECTION
+   ========================================= */
+
+.register-right {
+    width: 68%;
+
+    min-height: 100vh;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f7fafb;
+}
+
+
+.register-card {
+    width: 100%;
+
+    max-width: 1050px;
+
+    background: white;
+
+    border: 1px solid #e1e8ed;
+
+    border-radius: 9px;
+
+    padding: 28px 34px 30px;
+
+    box-shadow:
+        0 4px 20px rgba(15, 42, 67, 0.08);
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.register-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 25px;
+}
+
+
+.register-header h1 {
+    font-size: 24px;
+
+    color: #102a43;
+
+    margin-bottom: 7px;
+}
+
+
+.register-header p {
+    font-size: 12px;
+
+    color: #64748b;
+}
+
+
+.login-link {
+    font-size: 11px;
+
+    color: #64748b;
+
+    padding-top: 4px;
+
+    white-space: nowrap;
+}
+
+
+.login-link a {
+    color: #008f91;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    margin-left: 6px;
+}
+
+
+/* =========================================
+   STEPPER
+   ========================================= */
+
+.stepper {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    margin: 15px 0 35px;
+}
+
+
+.step {
+    width: 110px;
+
+    position: relative;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+
+.step-circle {
+    width: 30px;
+    height: 30px;
+
+    margin: 0 auto 6px;
+
+    border-radius: 50%;
+
+    border: 1px solid #aab8c5;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #7b8da0;
+
+    font-size: 12px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.step.active .step-circle {
+    background: #0da6a8;
+
+    border-color: #0da6a8;
+
+    color: white;
+}
+
+
+.step-number {
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #dce4ea;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: -3px auto 5px;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+.step.active .step-number {
+    background: #0da6a8;
+
+    color: white;
+}
+
+
+.step p {
+    font-size: 10px;
+
+    color: #64748b;
+
+    line-height: 1.25;
+}
+
+
+.step.active p {
+    color: #00999b;
+
+    font-weight: 600;
+}
+
+
+.step-line {
+    flex: 1;
+
+    height: 2px;
+
+    background: #dce4e9;
+
+    margin-top: 14px;
+
+    min-width: 30px;
+}
+
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.form-section h2 {
+    font-size: 17px;
+
+    color: #102a43;
+
+    margin-bottom: 22px;
+}
+
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+.form-group {
+    width: 100%;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #102a43;
+
+    margin-bottom: 7px;
+}
+
+
+.input-box {
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #d5dfe7;
+
+    border-radius: 7px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 13px;
+
+    transition: 0.2s;
+}
+
+
+.input-box:focus-within {
+    border-color: #08aeb0;
+
+    box-shadow:
+        0 0 0 2px rgba(8, 174, 176, 0.08);
+}
+
+
+.input-box > i:first-child {
+    color: #8292a3;
+
+    font-size: 13px;
+
+    width: 24px;
+
+    flex-shrink: 0;
+}
+
+
+.input-box input,
+.input-box select {
+    border: none;
+
+    outline: none;
+
+    width: 100%;
+
+    height: 100%;
+
+    font-size: 12px;
+
+    color: #334e68;
+
+    background: transparent;
+}
+
+
+.input-box input::placeholder {
+    color: #8a9aaa;
+}
+
+
+.toggle-password {
+    cursor: pointer;
+
+    color: #8292a3 !important;
+
+    width: auto !important;
+
+    font-size: 12px !important;
+}
+
+
+/* =========================================
+   SELECT
+   ========================================= */
+
+.select-box {
+    position: relative;
+}
+
+
+.select-box select {
+    appearance: none;
+
+    cursor: pointer;
+
+    padding-right: 25px;
+}
+
+
+.select-box > i:last-child {
+    width: auto !important;
+
+    color: #8292a3;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   PHONE
+   ========================================= */
+
+.phone-group {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.button-area {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 10px;
+}
+
+
+.button-area button {
+    border: none;
+
+    background: #0ba6a8;
+
+    color: white;
+
+    height: 42px;
+
+    padding: 0 20px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    transition: 0.2s;
+}
+
+
+.button-area button:hover {
+    background: #078f91;
+}
+
+
+.button-area button i {
+    font-size: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .register-left {
+        width: 38%;
+    }
+
+    .register-right {
+        width: 62%;
+        padding: 15px;
+    }
+
+    .register-card {
+        padding: 25px;
+    }
+
+    .left-content h1 {
+        font-size: 32px;
+    }
+
+    .step {
+        width: 80px;
+    }
+
+    .step p {
+        font-size: 9px;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .register-page {
+        flex-direction: column;
+    }
+
+    .register-left {
+        width: 100%;
+        min-height: 430px;
+    }
+
+    .register-right {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .left-content {
+        bottom: 30px;
+    }
+
+    .register-header {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .login-link {
+        align-self: flex-start;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .stepper {
+        overflow-x: auto;
+
+        padding-bottom: 8px;
+    }
+
+    .step {
+        min-width: 85px;
+    }
+
+    .step-line {
+        min-width: 20px;
+    }
+}

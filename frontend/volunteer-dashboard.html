@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard | VDRCS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">VDRCS</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="volunteer-dashboard.html">Dashboard</a>
+        <a href="login.html">Logout</a>
+    </nav>
+</header>
+
+<main class="dashboard-page">
+
+    <div class="dashboard-header">
+        <div>
+            <span class="tag">VOLUNTEER PANEL</span>
+            <h1>Volunteer Dashboard</h1>
+            <p>View assigned tasks, relief areas and emergency updates.</p>
+        </div>
+    </div>
+
+    <div class="dashboard-stats">
+
+        <div class="dashboard-card">
+            <span>Assigned Tasks</span>
+            <strong>06</strong>
+            <small>Your current tasks</small>
+        </div>
+
+        <div class="dashboard-card">
+            <span>Completed</span>
+            <strong>18</strong>
+            <small>Successfully completed</small>
+        </div>
+
+        <div class="dashboard-card">
+            <span>Active Tasks</span>
+            <strong>03</strong>
+            <small>Currently working</small>
+        </div>
+
+        <div class="dashboard-card">
+            <span>Availability</span>
+            <strong>ON</strong>
+            <small>Available for relief</small>
+        </div>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="panel">
+            <h2>My Relief Tasks</h2>
+
+            <div class="list-item">
+                <div>
+                    <strong>Food Distribution</strong>
+                    <small>Area A • 10:00 AM</small>
+                </div>
+                <span class="status active">Active</span>
+            </div>
+
+            <div class="list-item">
+                <div>
+                    <strong>Medical Camp Support</strong>
+                    <small>Area B • 02:00 PM</small>
+                </div>
+                <span class="status warning">Pending</span>
+            </div>
+
+            <div class="list-item">
+                <div>
+                    <strong>Relief Material Delivery</strong>
+                    <small>Area C • 04:00 PM</small>
+                </div>
+                <span class="status active">Assigned</span>
+            </div>
+
+        </div>
+
+        <div class="panel">
+            <h2>Emergency Updates</h2>
+
+            <div class="activity">
+                <strong>Priority Area Alert</strong>
+                <small>Additional volunteers required in Area A</small>
+            </div>
+
+            <div class="activity">
+                <strong>Medical Support Needed</strong>
+                <small>Medical volunteers requested in Area B</small>
+            </div>
+
+            <div class="activity">
+                <strong>Resource Update</strong>
+                <small>Food supplies are being distributed</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
